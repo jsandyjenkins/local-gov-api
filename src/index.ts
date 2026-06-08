@@ -4,7 +4,6 @@ import { Hono } from 'hono'
 const app = new Hono()
 
 app.all('/licensing', (c) => {
-  const x = c.req
   return c.text('Hello Hono!')
 })
 
