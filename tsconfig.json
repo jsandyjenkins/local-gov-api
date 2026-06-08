@@ -1,16 +1,14 @@
 {
+  "extends": "./tsconfig.node.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "NodeNext",
-    "strict": true,
-    "verbatimModuleSyntax": true,
-    "skipLibCheck": true,
-    "types": [
-      "node"
-    ],
+    "checkJs": true,
+    "strictPropertyInitialization": false,
+    "paths": {
+      "@entities": ["/src/database/entities/index.ts"]
+    },
     "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx",
-    // "outDir": "./dist"
+    "jsxImportSource": "hono/jsx"
   },
-  "exclude": ["node_modules"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
