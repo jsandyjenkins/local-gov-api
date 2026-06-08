@@ -15,11 +15,11 @@ app.use(cors({
 }))
 
 app.all('/licensing', (c) => {
-  return c.text('Hello Hono!')
+  return c.json({'message': 'Hello Hono!'})
 })
 
 app.get('/', (c) => {
-  return c.text('Hello Hono!')
+  return c.json({'message': 'Hello Hono!'})
 })
 
 serve({
