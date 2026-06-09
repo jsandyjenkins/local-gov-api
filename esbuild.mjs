@@ -11,6 +11,7 @@ const execAsync = promisify(exec);
 await esbuild.build({
   entryPoints: {
     endpoints: 'src/endpoints/index.mts',
+    index: 'src/index.ts',
   },
   bundle: true,
   platform: 'node',
