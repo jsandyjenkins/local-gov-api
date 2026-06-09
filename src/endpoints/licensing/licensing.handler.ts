@@ -1,6 +1,6 @@
 import type { HonoRequest } from "hono";
-import { ApiDataSource } from "../database";
-import { PremisesLicenseRepository } from "../database/repositories/premises-license.repository";
+import { ApiDataSource } from "../../database";
+import { PremisesLicenseRepository } from "../../database/repositories/premises-license.repository";
 
 interface LicensingDependencies {
     premisesLicenseRepository: PremisesLicenseRepository
