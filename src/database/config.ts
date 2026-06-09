@@ -13,7 +13,7 @@ const dataSourceOptions: DataSourceOptions = {
   password: process.env.POSTGRES_PASSWORD,
   database: process.env.POSTGRES_DB,
   ssl: {
-    ca: fs.readFileSync('./global-bundle.pem').toString(),
+    rejectUnauthorized:false
   },
   entities: [PremisesLicense],
   migrations: [CreatePremisesLicense1780994571679],
