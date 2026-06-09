@@ -18,7 +18,7 @@ await esbuild.build({
   format: 'cjs',
   target: 'node22',
   packages: 'bundle',
-  outfile: 'dist/index.js',
+  outdir: 'dist',
   minify: true,
   external: ['pg-native', 'expo-sqlite', 'react-native'],
 });
