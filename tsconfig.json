@@ -1,28 +1,16 @@
 {
+  "files": [],
   "compilerOptions": {
-    "target": "ES2023",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "types": ["node"],
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "strict": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
     "checkJs": true,
+    "erasableSyntaxOnly": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "strictPropertyInitialization": false,
+    "types": ["node"],
     "paths": {
       "@entities": ["/src/database/entities/index.ts"]
-    },
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
+    }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
 

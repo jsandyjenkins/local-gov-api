@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc",
+    "build": "node esbuild.mjs",
     "start": "node dist/index.js",
     "typeorm": "npx typeorm-ts-node-esm -d ./src/database/config.mjs"
   },
