@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  postgres:
+    container_name: local-gov-db
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - local-gov-pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=Secret123
+      - POSTGRES_USER=user
+      - POSTGRES_DB=postgres
+    networks:
+      - local-gov-sam-network
+
+volumes:
+  local-gov-pgdata:
+    name: local-gov-pgdata
+
+networks:
+  local-gov-sam-network:
+    name: local-gov-sam-network
+    driver: bridge

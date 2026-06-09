@@ -1,6 +1,7 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
+import { licensingHandler } from './endpoints/licensing.handler'
 
 const app = new Hono()
 
@@ -14,8 +15,8 @@ app.use(cors({
   credentials: true
 }))
 
-app.all('/licensing', (c) => {
-  return c.json({'message': 'Hello Hono!'})
+app.all('/licensing', async (c) => {
+  return await licensingHandler(c.req)
 })
 
 app.get('/', (c) => {

@@ -2,6 +2,8 @@ import 'reflect-metadata';
 import * as fs from 'fs';
 
 import { DataSource, type DataSourceOptions } from 'typeorm';
+import { PremisesLicense } from './entities/premises-license.entity';
+import { CreatePremisesLicense1780994571679 } from './migrations';
 
 const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',
@@ -13,8 +15,8 @@ const dataSourceOptions: DataSourceOptions = {
   ssl: {
     ca: fs.readFileSync('./global-bundle.pem').toString(),
   },
-  entities: [ ],
-  migrations: [ ],
+  entities: [PremisesLicense],
+  migrations: [CreatePremisesLicense1780994571679],
   migrationsRun: true,
   logging: ['error', 'schema', 'warn', 'info'],
   connectTimeoutMS: 50000,
