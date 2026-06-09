@@ -1,7 +1,7 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
-import { licensingHandler } from './endpoints/index'
+import { licensingHandler } from './endpoints/licensing/licensing.handler'
 
 const app = new Hono()
 
