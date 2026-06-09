@@ -19,7 +19,7 @@ await esbuild.build({
   packages: 'bundle',
   outfile: 'dist/index.js',
   minify: true,
-  external: ['pg-native'],
+  external: ['pg-native', 'expo-sqlite', 'react-native'],
 });
 
 try {
